@@ -5,8 +5,8 @@ We use the CUPS printing system on Linux application servers running odoo ERP to
 
 ```
 <Printer Epson-LQ300-WHDD>
-Info Epson LQ-300 3rd fl DD Warehouse
-DeviceURI lpd://EPSDM-DDWH1/br80060150
+Info Epson LQ-300 DD Warehouse 3rd fl
+DeviceURI lpd://EPSDM-DDWH1/b80060150
 State Idle
 Accepting Yes
 Shared Yes
@@ -23,9 +23,9 @@ First check your CUPS version with:
 ```
 cups-config --version
 ```
-This ErrorPolicy handling is only available from CUPS version 1.3 and above.
+This ErrorPolicy handling is only available in CUPS version 1.3 and above.
 
-To change the default (global) error policy for new pinters:
+To change the default (global) error policy for new printers:
 
 Edit [``/etc/cups/cupsd.conf``]
 ```
@@ -42,7 +42,7 @@ service cups restart
 ```
 
 
-``Description from the CUPS source code:``
+Description from the CUPS source code:
 
 The ErrorPolicy directive defines the default policy that is used when a
    backend is unable to send a print job to the printer.
